@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate current coordinates"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latitude"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textLongitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Longitude"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textAltitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Altitude"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change coordinates into" />
+
+    <EditText
+        android:id="@+id/setLatitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="La: 00.000000"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/setLongitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lo: 00.000000"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/setAltitude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Al: 00.00"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/sreviceController"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start/stop service" />
+</LinearLayout>
