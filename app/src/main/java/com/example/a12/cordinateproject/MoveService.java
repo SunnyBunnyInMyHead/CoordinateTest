@@ -35,7 +35,7 @@ public class MoveService extends Service {
         longitude = -48.671337;
         altitude= 50;
 
-        move();
+        //move();
         return super.onStartCommand(intent, flags, startId);
     }
 
@@ -97,12 +97,9 @@ public class MoveService extends Service {
 
         lm.addTestProvider(mocLocationProvider, false, false, false, false, true, true, true, 0, 5);
         lm.setTestProviderEnabled(mocLocationProvider, true);
-
-        //Location loc = new Location(mocLocationProvider);
         Location mockLocation = new Location(mocLocationProvider); // a string
         mockLocation.setLatitude(latitude);  // double
         mockLocation.setLongitude(longitude);
-        //why I must set Altitude
         mockLocation.setAltitude(altitude);
         mockLocation.setTime(System.currentTimeMillis());
         mockLocation.setAccuracy(5);
@@ -113,3 +110,27 @@ public class MoveService extends Service {
     }
 
 }
+//call part
+/*
+ // private boolean serviceCondition = false;
+
+    public double getDoubleFromEditText(EditText editText){
+        return !String.valueOf(editText.getText()).equals("")?Double.valueOf(String.valueOf(editText.getText())):0.0;
+    }
+
+    public void serviceController(){
+        Intent intent = new Intent(this, MoveService.class);
+        intent.putExtra("la",getDoubleFromEditText(setLatitude));
+        intent.putExtra("lo",getDoubleFromEditText(setLongitude));
+        intent.putExtra("al",getDoubleFromEditText(setAltitude));
+
+       if(serviceCondition == true){
+            stopService(intent);
+            Toast.makeText(getApplicationContext(), "service off", Toast.LENGTH_SHORT).show();
+        }else {
+            startService(intent);
+            Toast.makeText(getApplicationContext(), "service on", Toast.LENGTH_SHORT).show();
+        }
+        serviceCondition = !serviceCondition;
+    }
+ */

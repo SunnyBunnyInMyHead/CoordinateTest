@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -37,21 +38,24 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change coordinates into" />
+        android:text="Change coordinates into"
+        tools:visibility="gone" />
 
     <EditText
         android:id="@+id/setLatitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="La: 00.000000"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        tools:visibility="gone" />
 
     <EditText
         android:id="@+id/setLongitude"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Lo: 00.000000"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        tools:visibility="gone" />
 
     <EditText
         android:id="@+id/setAltitude"
@@ -59,11 +63,19 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Al: 00.00"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/sreviceController"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="start/stop service" />
+        android:text="start/stop service"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/gps_inform"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="res" />
 </LinearLayout>
